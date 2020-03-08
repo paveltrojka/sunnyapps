@@ -8,20 +8,9 @@
 
 run_dir=$(dirname "${BASH_SOURCE[0]}")
 
-FILE=$run_dir/_vars_dir 		; [[ -f $FILE ]] && source $FILE || echo "$FILE not loaded"
-FILE=$MAINSHARE12/_vars_host 	; [[ -f $FILE ]] && source $FILE || echo "$FILE not loaded"
-FILE=$MAINSHARE12/_vars_dir2 	; [[ -f $FILE ]] && source $FILE || echo "$FILE not loaded"
-FILE=$MAINSHARE12/_vars_url 	; [[ -f $FILE ]] && source $FILE || echo "$FILE not loaded"
-FILE=$MAINSHARE12/_vars_sw 		; [[ -f $FILE ]] && source $FILE || echo "$FILE not loaded"
-FILE=$MAINSHARE12/_vars_other 	; [[ -f $FILE ]] && source $FILE || echo "$FILE not loaded"
-
-FILE=$MAINSHARE12/_vars_daily_quote	; [[ -f $FILE ]] && source $FILE || echo "$FILE not loaded"
-
-
-
-# credence
-
-for i in $MAINSHAREID/*.load ; do source $i ; done
+FILE=$run_dir/_vars_dir ; [[ -f $FILE ]] && source $FILE || echo "$FILE not loaded"
+[[ `ls $MAINSHARE12/_vars_* | grep -v "^_vars_dir$" | wc -l` -gt 0 ]] && for i in `ls $MAINSHARE12/_vars* | grep -v "^_vars_dir$"` ; do source "$i" ; done
+[[ `ls $MAINSHAREID/*.load` ]] 2>/dev/null &&  for i in $MAINSHAREID/*.load ; do source $i ; done
 FILE=$MAINSHAREID/credence.conf ; [[ -f $FILE ]] && source $FILE || echo "$FILE not loaded"
 
 
@@ -30,25 +19,11 @@ FILE=$MAINSHAREID/credence.conf ; [[ -f $FILE ]] && source $FILE || echo "$FILE 
 #  | _|  | |_| | | .` | | ' <  | (__  | _| 
 #  |_|    \___/  |_|\_| |_|\_\  \___| |___|
 
-
-
-
-
-
-
 for i in $MAINSHARE12/_funkce_*.sh ; do 
 	# printf "\nsourcing $i .... " 
 	source "$i"
 	[[ ! `source $i` == "" ]] && echo "$?" && echo "chyba"
 done	
-
-
-
-
-
-
-
-
 
 
 

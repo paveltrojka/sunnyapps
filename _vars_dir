@@ -1,0 +1,20 @@
+#!/bin/bash
+
+
+export MAINSHARE12="$run_dir"
+export MAINDIR=`echo $MAINSHARE12 | rev | cut -d "/" -f2- | rev`
+export MAINSHARE38="$MAINDIR/38_templates"
+export MAINSHARE51="$MAINDIR/51_my-coding"
+export MAINSHAREID="$MAINDIR/33_id"
+
+
+
+
+
+
+
+
+
+
+
+######
