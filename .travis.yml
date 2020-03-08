@@ -1,6 +1,6 @@
 
 deploy:
   provider: script
-  script: ./_funkce.sh
+  script: bash _funkce.sh
   on:
     branch: master
