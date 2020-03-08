@@ -5,3 +5,9 @@ deploy:
   script: bash _funkce.sh
   on:
     branch: master
+
+env:
+  - PACKAGE_VERSION="1.0"
+
+
+  
