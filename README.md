@@ -6,7 +6,17 @@
   <br>
 </h1>
 
-<h4 align="center">Vulnx 🕷️ is An Intelligent Bot Auto Shell Injector that detects vulnerabilities in multiple types of Cms </h4>
+<h4 align="center">SunnyApps ---- pure bash based utils for daily usage </h4>
+
+<p align="center">
+   <a href="https://github.com/paveltrojka/sunnyapps/releases">
+    <img src="https://img.shields.io/github/release/paveltrojka/sunnyapps.svg">
+  </a>
+
+
+
+
+</P>
 
 
 
