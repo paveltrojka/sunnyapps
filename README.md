@@ -19,7 +19,7 @@
   </a>
   
   <a href="https://travis-ci.com/paveltrojka/sunnyapps">
-    <img src="https://img.shields.io/travis/com/paveltrojka/sunnyapps.svg">
+    <img src="https://img.shields.io/travis/paveltrojka/sunnyapps.svg">
   </a>
 
 
